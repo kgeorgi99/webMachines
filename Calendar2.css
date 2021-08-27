@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #0f0f0f;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  
+  background-color: #f8c983;
+  color: black;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background: #f09c1e;
+  color: white;
+}
+
+/* Style the input container */
+.topnav .login-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav input {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 15px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/* Style the button inside the input container */
+.topnav .login-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #f8c983;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+  
+  background-color: #f8c983;
+  color: black;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav .login-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #f8c983;
+  }
+} 
+body {
+  background-image: url("2.jpg");
+}
+
+.container {
+  width: 45rem;
+  height: 45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8e4c5;
+  ;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.calendar {
+  border-radius: 5px;
+ width: 45rem;  
+ height: 45rem;
+}
+.month {
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  height: 7rem;
+  background-color: #f8c983;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.month i{
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.month h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.month p{
+  font-size: 1.6rem;
+}
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 .4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.weekdays div{
+  font-size: 1rem;
+  letter-spacing: .1rem; 
+  width: calc(44.2rem/7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.days div{
+  font-size: .8rem;
+  margin: 0.3rem;
+  width: calc(40.2rem/7);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.prevday,
+.nextday{
+  opacity: 0.5;
+}
+.today {
+  background-color: #f8c983;
+  border-radius: 5px;
+}
+.days div:hover:not(.today){
+  background-attachment: grey;
+  border: 0.2rem solid rgb(216, 166, 166);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer{
+  background-color: black;
+  text-align: center;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
